@@ -6,30 +6,35 @@
     <title>Affiliate - Basketball Passion</title>
     <link rel="stylesheet" href="style.css"> 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YBYSKBYMD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7YBYSKBYMD');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YBYSKBYMD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7YBYSKBYMD');
+    </script>
 </head>
 <body>
     <header>
         <h1>Affiliate Program</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="affiliate.html">Affiliate</a></li>
-                <li><a href="resources.html">Resources</a></li>
+                <!-- Navigation links with GA4 tracking -->
+                <li><a href="index.html" 
+                       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Home' });">Home</a></li>
+                <li><a href="about.html" 
+                       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'About' });">About</a></li>
+                <li><a href="gallery.html" 
+                       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Gallery' });">Gallery</a></li>
+                <li><a href="contact.html" 
+                       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Contact' });">Contact</a></li>
+                <li><a href="affiliate.html" 
+                       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Affiliate' });">Affiliate</a></li>
+                <li><a href="resources.html" 
+                       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Resources' });">Resources</a></li>
             </ul>
         </nav>
     </header>
-
 
     <section>
         <article>
@@ -38,11 +43,14 @@
             
             <h3>Classmates:</h3>
             <ul>
-                <li><a href="https://abiparilla.github.io/it030/final/index.html" target="_blank">Abigail Parilla</a></li> 
-                <li><a href="https://mpolito1.github.io/finalproject/index.html" target="_blank">Marisa Polito</a></li> 
-                <li><a href="https://prisriva.github.io/founders_collective/" target="_blank">Prisha Srivastava</a></li> 
+                <!-- CTA events for affiliate links -->
+                <li><a href="https://abiparilla.github.io/it030/final/index.html" target="_blank"
+                       onclick="gtag('event', 'CTR', { event_category: 'callToAction', event_label: 'Abigail Parilla' });">Abigail Parilla</a></li> 
+                <li><a href="https://mpolito1.github.io/finalproject/index.html" target="_blank"
+                       onclick="gtag('event', 'CTR', { event_category: 'callToAction', event_label: 'Marisa Polito' });">Marisa Polito</a></li> 
+                <li><a href="https://prisriva.github.io/founders_collective/" target="_blank"
+                       onclick="gtag('event', 'CTR', { event_category: 'callToAction', event_label: 'Prisha Srivastava' });">Prisha Srivastava</a></li> 
             </ul>
-            <p></p>
         </article>
     </section>
 
@@ -51,6 +59,5 @@
     </footer>
 
     <script src="final.js"></script>
-
 </body>
 </html>

@@ -6,51 +6,56 @@
     <title>Contact - Basketball Passion</title>
     <link rel="stylesheet" href="style.css">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YBYSKBYMD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
- 
-  gtag('config', 'G-7YBYSKBYMD');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YBYSKBYMD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7YBYSKBYMD');
+    </script>
 </head>
 <body>
     <header>
         <h1>Contact Me</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="affiliate.html">Affiliate</a></li>
-                <li><a href="resources.html">Resources</a></li>
+                <!-- Navigation links with GA4 event tracking -->
+                <li><a href="index.html" 
+                       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Home' });">Home</a></li>
+                <li><a href="about.html" 
+                       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'About' });">About</a></li>
+                <li><a href="gallery.html" 
+                       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Gallery' });">Gallery</a></li>
+                <li><a href="contact.html" 
+                       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Contact' });">Contact</a></li>
+                <li><a href="affiliate.html" 
+                       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Affiliate' });">Affiliate</a></li>
+                <li><a href="resources.html" 
+                       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Resources' });">Resources</a></li>
             </ul>
         </nav>
     </header>
-
 
     <section>
         <article>
             <h2>Get in Touch</h2>
             <p>Feel free to contact me about basketball, training, or just to talk hoops!</p>
 
-
             <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=2980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Basketball hoop">
-
 
             <figcaption>
                 Photo by <a href="https://unsplash.com/@markusspiske" target="_blank" rel="noopener noreferrer">Markus Spiske</a> on <a href="https://unsplash.com" target="+blank" rel="noopener noreferrer">Unsplash</a>
             </figcaption>
 
-            
             <p><strong>Email:</strong> <a href="mailto:michaelahodge32@gmail.com">michaelahodge32@gmail.com</a></p>
             <p><strong>Phone:</strong> <a href="tel:+12523706057">(252) 370-6057</a></p>
             <p><strong>Social Media</strong> <a href="https://www.instagram.com/michaela_supreme/" target="_blank">https://www.instagram.com/michaela_supreme/</a></p>
 
-
-            <form>
+            <!-- Contact Form -->
+            <form onsubmit="gtag('event', 'CTR', {
+                event_category: 'callToAction',
+                event_label: 'Send Message'
+            });">
                 <label for="name">Name:</label>
                 <input type="text" id="name" required>
 
@@ -69,14 +74,6 @@
         <p>© 2025 Basketball Passion</p>
     </footer>
 
-
     <script src="final.js"></script>
-
-
-    
 </body>
 </html>
-    
-        
-    
-   
