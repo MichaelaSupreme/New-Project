@@ -1,15 +1,27 @@
-const colors = ["#fff9f7", "#fefff7", "#f7fff7"];
 
-const userName = prompt("What is your name?");
-const colorChoice = prompt("Pick a background color: 0 for grey, 1 for yellow, 2 for green");
+let userName = localStorage.getItem('name');
+let userTheme = localStorage.getItem('theme');
 
-const userInfo = {
-    name: userName,
-    selectedColor: colors[colorChoice]
-};
 
-console.log("The first color in the array is:", colors[0]);
+if (!userName || !userTheme) {
+    userName = prompt("What's your name?");
+    userTheme = prompt("Do you prefer dark or light theme?").toLowerCase();
 
-document.body.style.backgroundColor = userInfo.selectedColor;
+    localStorage.setItem('name', userName);
+    localStorage.setItem('theme', userTheme);
+}
 
-document.body.innerHTML += '<h2>Welcome, ${userInfo.name}!</h2>';
+
+const welcome = document.getElementById("welcome-message");
+if (welcome && userName) {
+    welcome.textContent = `Welcome back, ${userName}`;
+}
+
+
+if (userTheme === 'dark') {
+    document.body.style.backgroundColor = "#121212";
+    document.body.style.color = "#f1f1f1";
+} else {
+    document.body.style.backgroundColor = "#ffffff";
+    document.body.style.color = "#121212";
+}
