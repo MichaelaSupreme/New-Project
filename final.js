@@ -1,8 +1,6 @@
 
-
 let userName = localStorage.getItem('name');
 let userTheme = localStorage.getItem('theme');
-
 
 if (!userName || !userTheme) {
   userName = prompt("What's your name?");
@@ -12,6 +10,7 @@ if (!userName || !userTheme) {
   localStorage.setItem('name', userName);
   localStorage.setItem('theme', userTheme);
 }
+
 
 const welcome = document.getElementById("welcome-message");
 if (welcome && userName) {
@@ -28,14 +27,30 @@ function applyTheme(theme) {
   }
 }
 
+
 applyTheme(userTheme);
+
 
 const toggleButton = document.createElement("button");
 toggleButton.textContent = "Toggle Theme";
+
+
+toggleButton.style.position = "fixed";  
+toggleButton.style.bottom = "20px";     
+toggleButton.style.right = "20px";      
+toggleButton.style.padding = "10px";    
+toggleButton.style.backgroundColor = "#444";  
+toggleButton.style.color = "#fff";      
+toggleButton.style.border = "none";     
+toggleButton.style.cursor = "pointer";  
+
 document.body.appendChild(toggleButton);
+
 
 toggleButton.addEventListener('click', () => {
   userTheme = (userTheme === 'dark') ? 'light' : 'dark'; 
   localStorage.setItem('theme', userTheme); 
-  applyTheme(userTheme);
+  applyTheme(userTheme); 
 });
+
+
